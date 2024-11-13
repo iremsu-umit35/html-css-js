@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+/*renklere isim ataması*/
+:root{
+    --line-border-fill: #ff4d6d;
+    --line-border-empty: #dee2e6;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;     /*içerikler kolayca merkezlenmesi için kullanılır*/
+    align-items: center;    /* yukarıdan aşağıya ortalar */
+    justify-content: center;    /*soldan sağa ortalar*/
+    height: 100vh;
+    margin: 0;     /* sayfanın kenar boşluklarını sıfırlar*/
+    overflow: hidden;    /* taşan içerikler görünmemesi için kullanılır*/
+}
+
+/*bu sınıfın içindeki tüm metinler ve satır içi elemanlar sayfanın ortasında hizalanır.*/
+.container{
+    text-align: center;
+}
+
+/* ilerleme çubuğu özellikleri*/
+.progress_container{
+    display: flex;
+    justify-content: space-between;  /* Dairelerin arasındaki boşlukları eşit dağıtır.*/
+    position: relative;
+    margin-bottom:30px;
+    width: 350px;
+    max-width: 100%;
+}
+
+/*ilerleme çubuğu çizgisi*/
+.progress_container::before{
+    content: ' ';
+    background-color: var(--line-border-empty);
+    height:4px ;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);  /* dikey olarak ortalamak için kullanıldı*/
+    z-index: -1;
+    transition: 0.4s ease;  /* geçiş efekti*/
+}
+/* ilerleme çubuğu doluluğu*/
+.progress{
+    background-color: var(--line-border-fill);
+    height: 4px;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+/* daire özellikleri*/
+ .circle{
+     background-color: #fff;
+     border-radius: 50%;  /* daire şekli korumak için*/
+     height: 50px;
+     width: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 3px solid var(--line-border-empty);
+     transition: 0.4s ease;
+ }
+
+ /* daire aktif olduğunda rengini dolu yapar*/
+ .circle.active{
+     border-color:  var(--line-border-fill);
+ }
+
+ .btn{
+     background-color: var(--line-border-fill);
+     color: #ffffff;
+     border: 0;
+     border-radius: 10px;  /* hafif yuvarlak köşeler*/
+     cursor: pointer;
+     font-family: inherit;
+     padding: 8px 24px;
+     font-size: 20px;
+     margin: 5px;  /* butonlar arası boşluk*/
+
+ }
+
+ /*Düğmeye basıldığında düğmeyi hafifçe küçültür.*/
+ .btn.active{
+     transform: scale(0.98);
+ }
+
+/*Düğme devre dışı bırakıldığında düğme rengini boş duruma ayarlar.*/
+.btn:disabled{
+    background-color: var(--line-border-empty);
+}
+ .btn:focus{
+     outline: 0;
+ }
