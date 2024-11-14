@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+/* google inter fontu ekliyor*/
+* {
+    box-sizing: border-box;
+}
+
+body{
+    /*font-size: 14px;*/
+    font-family: 'Inter', sans-serif;
+    background-color: #333;
+    color: #222;
+    margin: 0;
+    overflow-x: hidden; /* x ekseninde yatay kaydırma işlemi kapatıldı*/
+}
+
+.container{
+    background-color: white;
+    transform-origin: top left;    /*sol üst köşeden*/
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh; /*burada min farkı ne*/
+    padding: 10px;    /* container etrafına boşluk ekliyor*/
+
+}
+
+.container.show-nav{
+    transform: rotate(-30deg); /*20derece kayması için*/
+}
+.circle-container{
+    position: fixed; /* daire sabit dursun diye kullanılımış*/
+    top: -100px;   /* konumlandırma yapılmış*/
+    left: -100px;
+}
+ .circle{
+     background-color: #ff7979;
+     height: 200px;
+     width: 200px;
+     border-radius: 50%;
+     position: relative;
+     transition: transform 0.5s linear;  /* animasyon eklendi*/
+ }
+ .circle button{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     height: 100px;
+     background-color: transparent;
+     border: none;
+     font-size: 26px;
+     color:#fff;
+ }
+
+ .circle button:focus{
+     outline: none;
+ }
+ .circle button#open{
+     left: 60%;
+ }
+ .circle button#close{
+     top: 60%;
+     transform: rotate(90deg);   /* 'close' butonunu 90 derece döndürüyoruz. */
+     transform-origin: top left;  /* Döndürme işlemini sol üst köşe etrafında yapıyoruz. */
+ }
+ .container.show-nav .circle{
+     transform: rotate(-70deg);
+ }
+ .content{
+     max-width: 1000px; /* içerik genişliği*/
+     margin: 50px auto; /* içerik ortalama ve 50px margin bırakma*/
+ }
+
+ .content h1{
+     margin: 0;
+ }
+ .content small{
+     color: #555;
+     font-style: italic;
+ }
+
+ .content p{
+     color: #333;
+     line-height: 1.5;  /* paragraflar arası yükseklik için kullanıldı*/
+ }
+ .content img{
+     max-width: 100%;
+ }
+
+ /* menü navigasyonu*/
+ nav{
+     position: fixed;
+     bottom: 25%; /*ekranın alt kısmından %25 yukarıda konumlandırılıyor*/
+     left: 0;   /* sol tarafa konumlandırıldı*/
+     z-index: 100;
+     color: white;
+ }
+
+ nav ul{
+     list-style: none;
+     padding-left: 30px;
+ }
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin:40px 0;
+    transform: translateX(-100%); /* Menü öğelerini başlangıçta ekranın dışına kaydırıyor */
+    transition: transform 0.4s ease-in;
+}
+nav ul li + li{
+    margin-left: 15px;
+    transform: translateX(-150%); /* İkinci öğeyi ekranın dışına kaydırıyoruz. */
+}
+nav ul li + li + li{
+    margin-left: 30px;
+    transform: translateX(-200%); /* Üçüncü öğeyi ekranın dışına kaydırıyoruz. */
+}
+.container.show-nav+ nav li {
+    transform: translateX(0);  /* buraya araştır*/
+    transition-delay:0.3s ;
+}
+
+nav ul li i {
+    font-size: 20px;  /* icon boyutu*/
+    margin-right: 10px;
+}
