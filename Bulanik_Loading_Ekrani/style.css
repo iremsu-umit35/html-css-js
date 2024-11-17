@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&family=Rye&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rye', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bg{
+
+    background: no-repeat center/cover url('https://bigfoto.name/uploads/posts/2022-04/1648998280_23-bigfoto-name-p-bolshoi-zagorodnii-dom-43.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(0px); /* bulanıklık katma için kullanıldı*/
+}
+
+.loading-text{
+    color: yellow;
+    font-size: 100px;
+}
