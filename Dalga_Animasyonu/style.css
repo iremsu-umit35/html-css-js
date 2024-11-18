@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --font-color:#C66868;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffe6dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.container h1 {
+    color:var(--font-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: #7197c6;
+}
+.form-control{
+    position: relative;
+    margin:20px 0 50px;
+
+}
+
+.form-control input{
+    border: 0;
+    border-bottom: 2px solid #999999 ;
+    display: block;
+    width: 100%;
+    padding: 15px;
+}
+
+.form-control input:focus , .form-control input:valid{
+    outline: none;
+    border-bottom: #999 ;
+    font-size: 16px;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--font-color);
+    border: none;
+    color: #fff;
+    font-size:16px;
+    border-radius: 25px;
+    padding: 15px;
+    font-family: inherit;
+}
+
+.btn:focus{
+    outline: none;
+}
+.btn:active{
+    transform: scale(0.95);
+}
+text{
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+.text a:hover {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.7, -0.6, 0.3, 1.55);
+}
+
+/*dalgalı olması için*/
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: #999;
+    transform: translateY(-30px);
+}
