@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rye&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rye', sans-serif;
+    background-color: #ff0ec0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+h2{
+    color: aliceblue;
+}
+h1{
+    margin: 10px;
+    color: white;
+}
+.box {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 150px;
+    margin: 10px;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 1); /* box'a gölge yapıyor*/
+    border-radius: 15px;
+    border: 2px solid white;
+    transform: translateX(400%);/* burda içerikler saklanacak biz ekranı indirdikçe çıkacak*/
+    transition: transform 1s ease;  /*js de aktif olacak  */
+}
+
+/*çift ve tek ayırmak için*/
+.box:nth-last-child(even){
+    transform: translateX(-400%);
+}
+
+/* js de aktif edicek ve showu ekliyip çıkaracak*/
+.box.show{
+    transform: translateX(0);
+}
+
+.box h2{
+    font-size: 35px;
+}{}
