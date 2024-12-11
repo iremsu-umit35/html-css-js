@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&family=Rye&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+    background-image: url('./background.png');
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+.add{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    background-color: crimson;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    box-shadow:  rgb(0,0,0,0.6) 2px 2px 6px ;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add.active{
+    transform: scale(0.99) ;
+}
+
+.note{
+    background: white;
+    box-shadow:  rgb(0,0,0,0.15) 2px 2px 6px ;
+    margin: 30px 20px;
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.note .tools{
+    background-color: crimson;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.note img{
+    width: 30px;
+    position: absolute;
+    padding: 5px;
+}
+
+.note .tools button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.note textarea{
+    outline: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.hidden{
+    display: none;
+}
