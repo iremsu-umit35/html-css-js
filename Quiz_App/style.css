@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background: url(./quiz.png) center center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    margin-top:70px;
+}
+
+.quiz-container{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow:0 0 10px 2px rgba(100, 100, 100, 0.6);
+    width: 600px;
+    margin-bottom: 15rem;
+}
+.quiz-header{
+    padding: 4rem;
+}
+
+h2{
+
+    padding: 0 1rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+ul li label{
+    cursor: pointer;
+}
+
+.submit{
+    border: none;
+    background-color: crimson;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    display: block;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#submit:focus:after{
+    content: " , Son Kararım ";
+}
+
+#submit:focus{
+    outline: none;
+    background-color: darksalmon;
+}
+
+/* Radyo düğmelerinin görünümünü kaldır */
+[type='radio']:checked,
+[type='radio']:not(:checked) {
+    display: none;
+}
+
+/* Radyo düğmeleri ve etiketler için konum ve stil ayarı */
+[type='radio']:checked + label,
+[type='radio']:not(:checked) + label {
+    position: relative;
+    padding-left: 1.8rem;
+    cursor: pointer;
+}
+
+/* Radyo düğmesi çerçevesi için stil */
+[type='radio']:checked + label:before,
+[type='radio']:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #ddd;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 100%;
+    background-color: #fff;
+}
+/* Seçili ve seçilmemiş radyo düğmesi içi */
+[type='radio']:checked + label:after,
+[type='radio']:not(:checked) + label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: crimson;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+/* Seçili olmayan radyo düğmesi içinin görünmez olması */
+[type='radio']:not(:checked) + label:after {
+    opacity: 0;
+}
+/* Seçili radyo düğmesi içinin görünür olması */
+[type='radio']:checked + label:after {
+    opacity: 1;
+}
