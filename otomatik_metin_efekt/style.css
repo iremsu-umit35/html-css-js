@@ -1,0 +1,43 @@
+:root{
+    --yellow-color: #ffe700;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    color:var(--yellow-color);
+    font-weight: bold;
+}
+
+.content {
+    font-size: 25px;
+}
+
+.speed{
+    position: absolute;
+    bottom: 20px;
+    background-color: #9c8f00;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+input{
+    width: 60px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--yellow-color);
+    border: none;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+}
+
+input:focus{
+    outline: none;
+}
