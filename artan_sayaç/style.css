@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Parkinsans:wght@300..800&family=Rye&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rye', sans-serif;
+    background: #7197c6;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 50px;
+    text-align: center;
+}
+
+.counter{
+    font-size: 50px;
+    margin-top: 15px;
+    letter-spacing: 10px;
+}
+
+span{
+    letter-spacing: 5px;
+}
+
+
+/*sayfa küçüldüğünde devreye giriyor*/
+@media (max-width: 1300px) {
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+}
