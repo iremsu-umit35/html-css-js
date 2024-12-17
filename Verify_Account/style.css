@@ -1,0 +1,86 @@
+:root{
+    --font-color: #e96b46
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Bold Italic Art", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+h2{
+    letter-spacing: 2px;
+}
+
+.container p{
+    color: #222;
+}
+
+.container p span{
+    display: block;
+    color: var(--font-color);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.code-container{
+    margin: 3rem 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.code{
+    font-family: inherit;
+    width: 50px;
+    height: 70px;
+    font-size: 2rem;
+    margin: 1%;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+/* .code sınıfına sahip tüm öğelerde spin butonlarını kaldırır */
+
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Webkit tabanlı tarayıcılarda spin butonlarının görünümünü kaldırır */
+    margin: 0;/* Spin butonlarının etrafındaki boşlukları sıfırlar */
+}
+
+.code:focus{
+    outline: none;
+    box-shadow: 0 8px 8px -4px rgba(0,0,0,0.2);
+}
+
+small{
+    color: #222222;
+
+}
+
+small a{
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.back{
+    margin: 20px 0 10px;
+}
+
+.back a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
