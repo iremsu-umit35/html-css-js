@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Font Awesome (Icon Kütüphanesi)-->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+    <title>Mobil Sekme Navigasyonu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Telefon benzeri bir tasarım kapsayıcısı -->
+<div class="phone">
+
+    <div class="content show about">     <!-- Telefon benzeri bir tasarım kapsayıcısı -->
+        <div class="text">
+            <h1>About me</h1>
+            <p>I am Front-end Developer</p>
+        </div>
+    </div>
+
+    <div class="content blog">        <!-- Blog sekmesi içeriği -->
+        <div class="text">
+            <h1>Blog</h1>
+            <p>Here are my articles</p>
+        </div>
+    </div>
+
+    <div class="content map">        <!-- Yol Haritası sekmesi içeriği -->
+        <div class="text">
+            <h1>Roadmap</h1>
+            <p>My life roadmap...</p>
+        </div>
+    </div>
+
+    <div class="content contact">        <!-- İletişim sekmesi içeriği -->
+        <div class="text">
+            <h1>Contact</h1>
+            <p>You can contact me using the links here</p>
+        </div>
+    </div>
+
+    <!-- Alt Navigasyon Çubuğu -->
+    <nav>
+        <ul>
+            <!-- Hakkımda Sekmesi: Varsayılan olarak aktif -->
+            <li class="active">
+                <i class="fa-solid fa-address-card"></i>
+                <p>About Me</p>
+            </li>
+            <!-- Blog Sekmesi -->
+            <li>
+                <i class="fa-brands fa-blogger"></i>
+                <p>Blog</p>
+            </li>
+            <!-- Yol Haritası Sekmesi -->
+            <li>
+                <i class="fa-solid fa-map"></i>
+                <p>Roadmap</p>
+            </li>
+            <!-- İletişim Sekmesi -->
+            <li>
+                <i class="fa-solid fa-book-open-reader"></i>
+                <p>Contact</p>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

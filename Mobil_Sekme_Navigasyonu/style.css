@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.15) 0%, /* yukarıda beyazdan şeffaflaşan */
+            rgba(0, 0, 0, 0.15) 100% /* aşağıda siyahın şeffaflaşan hali */
+    ),
+    radial-gradient(
+            at top center,
+            rgba(255, 255, 255, 0.4) 0%, /* üst kısmı daha açık */
+            rgba(0, 0, 0, 0.4) 120% /* alt kısmı daha koyu */
+    )
+    #989898; /* genel gri arka plan */
+    /* Arka plan blend modunu belirliyoruz */
+    background-blend-mode: multiply, multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.phone{
+    position: relative;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 9px 9px 3px;
+    border-radius: 20px;
+    width: 360px;
+    height: 100vh;
+}
+
+/* İçeriğin her bölümüne özel stil ayarlamaları */
+.phone .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: calc(100% - 60px); /* Alt navigasyon çubuğunun yüksekliğini ayarlıyoruz */
+    width: 100%;
+    opacity: 0;/* Başlangıçta içerikler görünmüyor */
+    transition: opacity 0.4s ease; /* Görünürlük değişimi için geçiş efekti */
+}
+
+/* Hakkımda sekmesi için arka plan resmi */
+.phone .content.about{
+    background-image: url(https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80);;
+}
+
+/* Blog sekmesi için arka plan resmi */
+.phone .content.blog {
+    background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+}
+
+/* Yol Haritası sekmesi için arka plan resmi */
+.phone .content.map {
+    background-image: url(https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80);
+}
+
+/* İletişim sekmesi için arka plan resmi */
+.phone .content.contact {
+    background-image: url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
+}
+/* İçeriğin görünür hale gelmesi için */
+.phone .content.show {
+    opacity: 1;
+}
+
+/* İçeriğin metin kısmı: arka plan rengi, yazı rengi ve iç boşluklar */
+.phone .content .text{
+    background: rgba(0, 0, 0, 0.7); /* Yarı şeffaf siyah arka plan */
+    color: white;
+    padding: 4rem 1rem;
+    border-radius: 15px;
+}
+
+/* Navigasyon çubuğu stili */
+nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+    width: 100%;
+    /*z-index: 2;*/
+}
+
+/* Navigasyon menüsündeki öğeleri düzenliyoruz */
+nav ul{
+    background-color: #fff;
+    color: #333;
+    list-style: none; /*liste işaretleri kalktı*/
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+
+/* Navigasyon öğeleri için stil */
+nav li {
+    cursor: pointer;
+    flex: 1; /* Eşit genişlikte alanlar oluşturuyor */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigasyon metinlerinin boyutunu küçültüyoruz */
+nav ul li p{
+    font-size: 12px;
+    margin: 2px 0; /*üst ve a lt boşluk*/
+
+}
+
+/* Navigasyon öğeleri üzerine gelindiğinde veya aktif olduğunda renk değişimi */
+nav ul li:hover,
+nav ul li.active {
+    color: burlywood; /* Hover ve aktif durumda renkli */
+}
