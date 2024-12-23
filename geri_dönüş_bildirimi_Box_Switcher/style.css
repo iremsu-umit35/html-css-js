@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.container{
+    background-color: skyblue;
+    padding: 3rem 5rem;
+    border-radius: 1rem;
+    color: #fff;
+    margin: 20px auto;
+    max-width: 40rem;
+    position: absolute;
+}
+
+.fa-quote{
+    color: black;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 70px;
+}
+
+.fa-quote-right {
+    left: 40px;
+}
+
+.fa-quote-left {
+    right: 40px;
+}
+
+.user-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-img{
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+}
+
+.user-details{
+    margin-left: 1rem;
+}
+
+.user .username{
+    margin: 0;
+}
+
+.user .job{
+    margin: 10px 0;
+}
+
+.progress-bar{
+    background-color: #ffff;
+    height: 4px;
+    width: 100%;
+    animation: grow 10s linear infinite;/* 10 saniyelik, sürekli tekrarlayan bir büyüme animasyonu */
+    transform-origin: left; /* Animasyonun başlangıç noktası sol taraf */
+}
+
+@keyframes grow {
+    0%{
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 35rem) {
+    .fa-quote{
+        display: none;
+    }
+}
