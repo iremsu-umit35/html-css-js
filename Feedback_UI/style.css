@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: palegreen;
+}
+
+/*ana container css*/
+.panel-container{
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 5px;
+    font-size: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.panel-container strong{
+    line-height: 1.5rem;
+}
+
+/*alt container css*/
+.ratings-container{
+    display: flex;
+    margin: 1rem auto;
+}
+
+.rating{
+    cursor: pointer;
+    margin: 0.5rem auto;
+}
+
+.rating p{
+    margin: 0;
+    font-size: 6rem;
+    transition: trasform 0.5s ease;
+}
+
+.rating small{
+    font-weight: bold;
+    color: #555;
+    transition: color 0.5s ease;
+}
+
+.rating:hover small, .rating.active small{
+    color: #111;
+}
+
+.rating:hover p, .rating.active p{
+    transform:scale(1.1);
+}
+
+/*buton css*/
+.btn{
+    background: palegreen;
+    border: none;
+    color: black;
+    font-family: inherit;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:active{
+    transform: scale(0.99);
+}
+
+.fa-heart{
+    color: #ca0b4a;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
